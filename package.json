@@ -1,13 +1,13 @@
 {
   "name": "workflows-for-hypercrx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "balabala",
   "main": "index.js",
   "repository": "git@github.com:tyn1998/workflows-for-hypercrx.git",
   "author": "Lam Tang <tangyenan@gmail.com>",
   "license": "MIT",
   "scripts": {
-      "build": "echo build",
-      "prettier:check": "echo prettier-check"
+    "build": "echo build",
+    "prettier:check": "echo prettier-check"
   }
 }
