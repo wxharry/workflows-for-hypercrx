@@ -1,0 +1,37 @@
+name: check-build-test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: "yarn"
+
+      - name: install dependencies
+        run: |
+          yarn install
+
+      - name: check
+        run: |
+          yarn run prettier:check
+
+      - name: build
+        run: |
+          yarn run build
+
+      - name: test
+        run: |
+          echo all files exist!
